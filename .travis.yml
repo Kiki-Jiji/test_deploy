@@ -11,7 +11,7 @@ install:
 
 script:
   - grunt build
-  - touch .nojekyll
+  - touch build/.nojekyll
 
 deploy:
   local_dir: build

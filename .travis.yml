@@ -1,0 +1,19 @@
+language: node_js
+
+node_js:
+  - node
+
+cache: npm
+
+install:
+  - npm install
+  - npm install -g adapt-cli
+
+script:
+  - grunt build
+
+deploy:
+  local_dir: build
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
